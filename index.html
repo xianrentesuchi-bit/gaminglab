@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GamingLab</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ヘッダー */
+header{
+    display:flex;
+    justify-content:flex-start; /* 左寄せに変更 */
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(15,23,42,.75); /* 透明度を微調整してより洗練された印象に */
+    backdrop-filter:blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* 微細な境界線を追加 */
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+/* ロゴ項目は削除 */
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    color:#cbd5e1; /* 初期状態を少し落ち着いた色に */
+    text-decoration:none;
+    margin-right:30px; /* 左寄せに伴い、右側にマージンを確保 */
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding: 4px 0;
+    transition:.3s;
+}
+
+/* ホバー時のモダンな下線アニメーション */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    transition: width .3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ヒーロー */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:
+    linear-gradient(rgba(15,23,42,.5),rgba(15,23,42,.85)),
+    url("src/assets/img/homepageback.png") center/cover; /* 背景画像を変更 */
+}
+
+.hero-content h1{
+    font-size:4.5rem; /* 少し大きくしてインパクトを強化 */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom:20px;
+    background: linear-gradient(to right, #ffffff, #94a3b8); /* 文字に微細なグラデーション */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    color:#94a3b8;
+    line-height: 1.8;
+}
+
+/* ボタンのUI強化 */
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 40px;
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    color:white;
+    border-radius:30px; /* 丸みを持たせてモダンに */
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3); /* ネオン感のあるシャドウ */
+    transition: transform .3s, box-shadow .3s, filter .3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* フッター */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#94a3b8;
+    border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+@media(max-width:768px){
+    header{
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    nav{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        margin:8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    nav a::after {
+        display: none; /* スマホ時はアニメーションを無効化 */
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#">ホーム</a>
+        <a href="#">ゲーム</a>
+        <a href="#">アカウント</a>
+        <a href="#">コミュニティ</a>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-content">
+        <h1>GamingLab</h1>
+        <p>
+           規制環境でもゲームを楽しもう!!
+        </p>
+        <a href="#" class="btn">ゲームを探す</a>
+    </div>
+</section>
+<footer>
+    ( ＾ω＾ )
+</footer>
+</body>
+</html>
