@@ -126,12 +126,18 @@ nav a:hover::after {
     font-weight: bold;
     font-size: 1.2rem;
     box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 新規追加ゲーム用の別カラーアイコン（視認性向上用） */
 .game-icon.new-game {
     background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
     box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .game-name {
@@ -211,67 +217,67 @@ footer{
     
     <div class="game-grid">
         <div class="game-card" onclick="playGame('/src/assets/games/2048/2048.html')">
-            <div class="game-icon">20</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/2048.png');"></div>
             <div class="game-name">2048</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/Geometry/GeometryDash.html')">
-            <div class="game-icon">GD</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/geometry-dash.png');"></div>
             <div class="game-name">Geometry Dash</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/block/block.html')">
-            <div class="game-icon">BL</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/block.png');"></div>
             <div class="game-name">Block</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/paperio/paperio.html')">
-            <div class="game-icon">PA</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/paperio.png');"></div>
             <div class="game-name">Paper.io</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/snowball/snow.html')">
-            <div class="game-icon">SB</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/snowball.png');"></div>
             <div class="game-name">Snowball</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/snowrider/snowrider.html')">
-            <div class="game-icon">SR</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/snowrider.png');"></div>
             <div class="game-name">Snow Rider</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/sticman/sticman.html')">
-            <div class="game-icon">SM</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/stickman.png');"></div>
             <div class="game-name">Stickman</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/tumutumu/tumu.html')">
-            <div class="game-icon">TT</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/tumutumu.png');"></div>
             <div class="game-name">TumuTumu</div>
         </div>
 
         <div class="game-card" onclick="playGame('/src/assets/games/tabletannis/index.html')">
-            <div class="game-icon">TT</div>
+            <div class="game-icon" style="background-image: url('/src/assets/images/tabletennis.png');"></div>
             <div class="game-name">卓球</div>
         </div>
 
         <div class="game-card new-card" onclick="playGame('/yohoho-io/index.html')">
-            <div class="game-icon new-game">YH</div>
+            <div class="game-icon new-game" style="background-image: url('/src/assets/images/yohoho.png');"></div>
             <div class="game-name">Yohoho.io</div>
         </div>
 
         <div class="game-card new-card" onclick="playGame('/poly-track/index.html')">
-            <div class="game-icon new-game">PT</div>
+            <div class="game-icon new-game" style="background-image: url('/src/assets/images/polytrack.png');"></div>
             <div class="game-name">Poly Track</div>
         </div>
 
         <div class="game-card new-card" onclick="playGame('/subway-surfers/index.html')">
-            <div class="game-icon new-game">SS</div>
+            <div class="game-icon new-game" style="background-image: url('/src/assets/images/subway.png');"></div>
             <div class="game-name">Subway Surfers</div>
         </div>
 
         <div class="game-card new-card" onclick="playGame('/table-tennis/index.html')">
-            <div class="game-icon new-game">WT</div>
+            <div class="game-icon new-game" style="background-image: url('/src/assets/images/tabletennis-wt.png');"></div>
             <div class="game-name">Table Tennis</div>
         </div>
     </div>
