@@ -7,14 +7,47 @@ const router = express.Router();
 // 静的ファイル（ゲーム選択画面のHTMLなど）を「public」フォルダから配信
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 専用の起動ルート：src/assets/games/viwer.html への直接アクセスを処理
+// ==========================================================================
+// 【追加】public配下にない特定のゲーム関連ファイルのルートマッピング
+// ==========================================================================
 app.get('/src/assets/games/viwer.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'assets', 'games', 'viwer.html'));
+    res.sendFile(path.join(__dirname, 'src/assets/games/viwer.html'));
 });
 
-// 専用の起動ルート：src/assets/games/games.html への直接アクセスを処理
 app.get('/src/assets/games/games.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'assets', 'games', 'games.html'));
+    res.sendFile(path.join(__dirname, 'src/assets/games/games.html'));
+});
+
+app.get('/src/assets/games/2048/2048.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/2048/2048.html'));
+});
+
+app.get('/src/assets/games/Geometry/GeometryDash.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/Geometry/GeometryDash.html'));
+});
+
+app.get('/src/assets/games/block/block.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/block/block.html'));
+});
+
+app.get('/src/assets/games/paperio/paperio.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/paperio/paperio.html'));
+});
+
+app.get('/src/assets/games/snowball/snow.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/snowball/snow.html'));
+});
+
+app.get('/src/assets/games/snowrider/snowrider.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/snowrider/snowrider.html'));
+});
+
+app.get('/src/assets/games/sticman/sticman.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/sticman/sticman.html'));
+});
+
+app.get('/src/assets/games/tumutumu/tumu.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/assets/games/tumutumu/tumu.html'));
 });
 
 // ゲーム名とGitHubのパスのマッピング設定
