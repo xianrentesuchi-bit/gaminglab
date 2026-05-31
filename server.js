@@ -7,6 +7,16 @@ const router = express.Router();
 // 静的ファイル（ゲーム選択画面のHTMLなど）を「public」フォルダから配信
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 専用の起動ルート：src/assets/games/viwer.html への直接アクセスを処理
+app.get('/src/assets/games/viwer.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'assets', 'games', 'viwer.html'));
+});
+
+// 専用の起動ルート：src/assets/games/games.html への直接アクセスを処理
+app.get('/src/assets/games/games.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'assets', 'games', 'games.html'));
+});
+
 // ゲーム名とGitHubのパスのマッピング設定
 const gamePaths = {
     'yohoho-io': 'yohoho-io',
@@ -14,19 +24,6 @@ const gamePaths = {
     'subway-surfers': 'hawaii', // スブウェイランのパス
     'table-tennis': 'table-tennis-world-tour' // 卓球のパス
 };
-
-// 特定の個別HTMLファイルを返すためのルーティング設定
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-app.get('/src/assets/games/viwer.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'src/assets/games/viwer.html'));
-});
-
-app.get('/src/assets/games/games.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'src/assets/games/games.html'));
-});
 
 // ゲームごとのリクエストを処理するルーティング
 router.get('/:game/:file(*)?', async (req, res) => {
