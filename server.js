@@ -15,6 +15,19 @@ const gamePaths = {
     'table-tennis': 'table-tennis-world-tour' // 卓球のパス
 };
 
+// 特定の個別HTMLファイルを返すためのルーティング設定
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/src/assets/games/viwer.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'src/assets/games/viwer.html'));
+});
+
+app.get('/src/assets/games/games.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'src/assets/games/games.html'));
+});
+
 // ゲームごとのリクエストを処理するルーティング
 router.get('/:game/:file(*)?', async (req, res) => {
     const gameKey = req.params.game;
