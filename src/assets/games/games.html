@@ -128,6 +128,12 @@ nav a:hover::after {
     box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
 }
 
+/* 新規追加ゲーム用の別カラーアイコン（視認性向上用） */
+.game-icon.new-game {
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+}
+
 .game-name {
     font-size: 1.1rem;
     font-weight: 600;
@@ -143,8 +149,18 @@ nav a:hover::after {
     background: rgba(30, 41, 59, 0.8);
 }
 
+/* 新規追加ゲーム用のカードホバー時エフェクト */
+.game-card.new-card:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);
+}
+
 .game-card:hover .game-name {
     color: #38bdf8;
+}
+
+.game-card.new-card:hover .game-name {
+    color: #c084fc;
 }
 
 /* フッター (デザイン継承) */
@@ -237,6 +253,26 @@ footer{
         <div class="game-card" onclick="playGame('/src/assets/games/tabletannis/index.html')">
             <div class="game-icon">TT</div>
             <div class="game-name">卓球</div>
+        </div>
+
+        <div class="game-card new-card" onclick="playGame('/yohoho-io/index.html')">
+            <div class="game-icon new-game">YH</div>
+            <div class="game-name">Yohoho.io</div>
+        </div>
+
+        <div class="game-card new-card" onclick="playGame('/poly-track/index.html')">
+            <div class="game-icon new-game">PT</div>
+            <div class="game-name">Poly Track</div>
+        </div>
+
+        <div class="game-card new-card" onclick="playGame('/subway-surfers/index.html')">
+            <div class="game-icon new-game">SS</div>
+            <div class="game-name">Subway Surfers</div>
+        </div>
+
+        <div class="game-card new-card" onclick="playGame('/table-tennis/index.html')">
+            <div class="game-icon new-game">WT</div>
+            <div class="game-name">Table Tennis</div>
         </div>
     </div>
 </div>
